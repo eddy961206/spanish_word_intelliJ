@@ -22,7 +22,7 @@ public class WordService {
         return wordRepository.getRandomWord();
     }
     @Transactional
-    public void updateWordCheck(int wordId) {
+    public void toggleWordCheckById(int wordId) {
         wordRepository.toggleWordCheckById(wordId);
     }
 

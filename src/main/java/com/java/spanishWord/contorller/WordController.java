@@ -21,16 +21,15 @@ public class WordController {
     public Word getRandomWord() {
         return wordService.getRandomWord();
     }
-    @PostMapping("/check-word")
-    public void updateWordCheck(int wordId) {
-        wordService.updateWordCheck(wordId);
+
+    @PostMapping("/toggle-word")
+    public void toggleWordCheckById(int wordId) {
+        wordService.toggleWordCheckById(wordId);
     }
 
     @GetMapping(value = "/checked-word", produces = "application/json;charset=UTF-8")
     public List<Word> getCheckedWordList() {
-        List<Word> list = wordService.getCheckedWordList();
-        System.out.println("list = " + list);
-        return list;
+        return wordService.getCheckedWordList();
     }
 
 }

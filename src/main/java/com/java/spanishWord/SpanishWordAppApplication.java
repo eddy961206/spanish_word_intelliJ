@@ -8,6 +8,5 @@ public class SpanishWordAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpanishWordAppApplication.class, args);
-		System.out.println("안녕");
 	}
 }
